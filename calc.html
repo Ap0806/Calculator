@@ -31,13 +31,13 @@
     <button class = "button" onclick = "calculate()">= </button>
 </div>
 <div>
-    <button class = "button" onclick = "pushNumber('*')">x</button>
-    <button class = "button" onclick = "pushNumber('/')">/</button>
+    <button class = "button" onclick = "pushNumb('*')">x</button>
+    <button class = "button" onclick = "pushNumb('/')">/</button>
 </div>
     <script>
-        var operation = {isSubmit: false, changeDisplay:true, Operand1: 0, Operand2: 0, Operation: " "};
+        let operation = {isSubmit: false, changeDisplay:true, Operand1: 0, Operand2: 0, Operation: " "};
         //isSubmit - to check if the equal button has been clicked
-        var x = document.getElementById("output")
+        let x = document.getElementById("output")
         p.innerHTML = " ";
         function pushNumb(b){
            if(operation.changeDisplay == true){
@@ -64,22 +64,22 @@
                 x.value = operation.Operand1 + operation.Operand2;
             }
             //subtraction
-            else if(operation.Operation == "-"){
+            if(operation.Operation == "-"){
                 document.getElementById("temp").innerHTML = x.value+ " = " +
                 (operation.Operand1 - operation.Operand2);
                 x.value = operation.Operand1 - operation.Operand2;
             }
             //multiplication
-            else if(operation.Operation == "*"){
+            if(operation.Operation == "*"){
                 document.getElementById("temp").innerHTML = x.value+ " = " +
                 (operation.Operand1 * operation.Operand2);
-                x.value = operation.Operand1 - operation.Operand2;
+                x.value = operation.Operand1 * operation.Operand2;
             }
             //division
             if(operation.Operation == "/"){
                 document.getElementById("temp").innerHTML = x.value+ " = " +
                 (operation.Operand1 / operation.Operand2);
-                x.value = operation.Operand1 - operation.Operand2;
+                x.value = operation.Operand1 / operation.Operand2;
             }
             operation.isSubmit = false;
             operation.changeDisplay = true;
