@@ -1,0 +1,47 @@
+body {
+    font-family: 'Abel';
+}
+div{
+   display: block;  
+   font-size : 0; 
+}
+
+div .button{
+   background-color : white;
+   color: rgb(128, 3, 3);
+   width: 100px;
+   text-align :center;
+   margin : 0;
+   padding: 10px 100px;
+   font-size: 1cm;
+   cursor: pointer;
+   border: 2px solid rgb(128, 3, 3);
+   transition-duration: 0.3s;
+   font-family: 'Abel';
+}
+
+div .button:hover {
+   background-color: rgb(128, 3, 3);
+   color: white;
+}
+
+#output{
+    padding: 0px 100px;
+    border : none;
+    border-bottom: 4px solid black;
+    font-size: 1cm;
+    text-align :center;
+    font-family: 'Abel';
+}
+
+#temp{
+    background-color: rgba(255, 166, 0, 0.253);
+    color : black;
+    max-width: 350px;
+    height: 20px;
+    border-bottom-color: black;
+    border-width: 20px;
+    padding: 0px 100px;
+    font-size: 0.5cm;
+    text-align: center;
+}

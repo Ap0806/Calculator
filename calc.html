@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head> 
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+   
+    <link type = "text/css" rel = "stylesheet" href = "calc.css">     
+    <form>
+        <input type = "text" id = "output" value = "">
+        <p id = "temp"> </p>
+    </form>
+</head>
+<body>   
+<div>
+    <button class = "button" onclick = "pushNumb(1)">1</button>
+    <button class = "button" onclick = "pushNumb(2)">2</button>    
+    <button class = "button" onclick = "pushNumb(3)">3</button>
+</div>
+<div>
+    <button class = "button" onclick = "pushNumb(4)">4</button>
+    <button class = "button" onclick = "pushNumb(5)">5</button>
+    <button class = "button" onclick = "pushNumb(6)">6</button>
+</div>
+<div>
+    <button class = "button" onclick = "pushNumb(7)">7</button>
+    <button class = "button" onclick = "pushNumb(8)">8</button>
+    <button class = "button" onclick = "pushNumb(9)">9</button>
+</div>
+<div>
+    <button class = "button" onclick = "pushNumb('+')">+</button>
+    <button class = "button" onclick = "pushNumb('-')">- </button>
+    <button class = "button" onclick = "calculate()">= </button>
+</div>
+    <script>
+        var operation = {isSubmit: false, changeDisplay:true, Operand1: 0, Operand2: 0, Operation: " "};
+        var x = document.getElementById("output")
+        p.innerHTML = " ";
+        function pushNumb(b){
+           if(operation.changeDisplay == true){
+               x.value = "";
+               operation.changeDisplay = false;
+           }
+           if(typeof b != "number"){
+               operation.Operation = b; 
+               operation.isSubmit = true;
+           }
+           else if(operation.isSubmit == false){               
+               operation.Operand1 = (operation.Operand1*10)+ b;              
+           }
+           else{
+               operation.Operand2 = (operation.Operand2*10) + b;
+           }
+           x.value = x.value + b;
+        }
+        function calculate(){
+            if(operation.Operation == "+"){
+                document.getElementById("temp").innerHTML = x.value + " = " +
+                (operation.Operand1 + operation.Operand2);
+                x.value = operation.Operand1 + operation.Operand2;
+            }
+            if(operation.Operation == "-"){
+                document.getElementById("temp").innerHTML = x.value+ " = " +
+                (operation.Operand1 - operation.Operand2);
+                x.value = operation.Operand1 - operation.Operand2;
+            }
+            operation.isSubmit = false;
+            operation.changeDisplay = true;
+            operation.Operand1 = 0;
+            operation.Operand2 = 0;
+        }
+    </script>
+</body>
