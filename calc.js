@@ -52,7 +52,7 @@ function calculate(){
 }
 
 //using the arrow notation for functions
-let clearFields = _ => {
+function clearFields(){
     x.value = "";
     document.getElementById("temp").innerHTML = ""; 
     operation.Operand1 = 0;
