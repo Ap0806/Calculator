@@ -22,28 +22,31 @@ function pushNumb(b){
 }
 function calculate(){
     //addition
-    if(operation.Operation == "+"){
+    switch(operation.Operation)
+    {
+    case "+":  
         document.getElementById("temp").innerHTML = x.value + " = " +
-        (operation.Operand1 + operation.Operand2);
-        x.value = operation.Operand1 + operation.Operand2;
-    }
+        (operation.Operand1 + operation.Operand2);     
+        x.value = operation.Operand1 + operation.Operand2;        
+        break;
     //subtraction
-    if(operation.Operation == "-"){
-        document.getElementById("temp").innerHTML = x.value+ " = " +
-        (operation.Operand1 - operation.Operand2);
+    case "-":
         x.value = operation.Operand1 - operation.Operand2;
-    }
+        document.getElementById("temp").innerHTML = x.value + " = " +
+        (operation.Operand1 - operation.Operand2);
+        break;
     //multiplication
-    if(operation.Operation == "*"){
-        document.getElementById("temp").innerHTML = x.value+ " = " +
-        (operation.Operand1 * operation.Operand2);
+    case "*":
         x.value = operation.Operand1 * operation.Operand2;
-    }
+        document.getElementById("temp").innerHTML = x.value + " = " +
+        (operation.Operand1 * operation.Operand2);
+        break;
     //division
-    if(operation.Operation == "/"){
-        document.getElementById("temp").innerHTML = x.value+ " = " +
-        (operation.Operand1 / operation.Operand2);
+    case "/":
         x.value = operation.Operand1 / operation.Operand2;
+        document.getElementById("temp").innerHTML = x.value + " = " +
+        (operation.Operand1 / operation.Operand2);
+        break;
     }
     operation.isSubmit = false;
     operation.changeDisplay = true;
