@@ -1,7 +1,8 @@
 ## JSCalc
 
-This is a basic calculator made using JavaScript, HTML and CSS. 
-When compiled, it looks like this: 
+This is a basic calculator made using JavaScript, HTML and CSS.    
 
-![output](https://github.com/Ap0806/JSCalc/blob/master/outputscreen.png)
+Click here to run it :    
+
+> [Click your Math worries away!](calc.html) 
 
