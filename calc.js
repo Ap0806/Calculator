@@ -57,6 +57,7 @@ function clearFields(){
     document.getElementById("temp").innerHTML = ""; 
     operation.Operand1 = 0;
     operation.Operand2 = 0;
+    operation.Operation = "";
     operation.changeDisplay = true;
     operation.isSubmit = false;
 }
