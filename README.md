@@ -4,5 +4,5 @@ This is a basic calculator made using JavaScript, HTML and CSS.
 
 Click here to run it :    
 
-> [Click your Math worries away!](http://htmlpreview.github.com/?https://github.com/Ap0806/JSCalc/blob/master/calc.html) 
+> [Click your Math worries away!](http://cors.io/?http://htmlpreview.github.com/?https://github.com/Ap0806/JSCalc/blob/master/calc.html) 
 
