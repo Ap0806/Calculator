@@ -30,22 +30,22 @@ function calculate(){
         x.value = operation.Operand1 + operation.Operand2;        
         break;
     //subtraction
-    case "-":
-        x.value = operation.Operand1 - operation.Operand2;
+    case "-":        
         document.getElementById("temp").innerHTML = x.value + " = " +
         (operation.Operand1 - operation.Operand2);
+        x.value = operation.Operand1 - operation.Operand2;
         break;
     //multiplication
-    case "*":
-        x.value = operation.Operand1 * operation.Operand2;
+    case "*":       
         document.getElementById("temp").innerHTML = x.value + " = " +
         (operation.Operand1 * operation.Operand2);
+        x.value = operation.Operand1 * operation.Operand2;
         break;
     //division
-    case "/":
-        x.value = operation.Operand1 / operation.Operand2;
+    case "/":        
         document.getElementById("temp").innerHTML = x.value + " = " +
         (operation.Operand1 / operation.Operand2);
+        x.value = operation.Operand1 / operation.Operand2;
         break;
     }
     operation.isSubmit = false;
